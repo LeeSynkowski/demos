@@ -12,7 +12,7 @@ var round = function(text, pos) {
                 } else {
                     text = text.substr(0,pos);
                 }
-            } 
+            }
         }
     }
     return text;
@@ -26,7 +26,7 @@ $(function() {
                 number = "";
                 totaldiv.text("Err");
             }
-        } 
+        }
     };
     var number = "";
     var newnumber = "";
@@ -34,43 +34,43 @@ $(function() {
     var totaldiv = $("#total");
     totaldiv.text("0");
     $("#numbers > a").not("#clear,#clearall").click(function(){
-		number += $(this).text();
-		totaldiv.text(number);
-		testNumLength(number);
+	number += $(this).text();
+	totaldiv.text(number);
+	testNumLength(number);
     });
     $("#operators > a").not("#equals").click(function(){
-		operator = $(this).text();
-		newnumber = number;
-		number = "";
-		totaldiv.text("0");
+	operator = $(this).text();
+	newnumber = number;
+	number = "";
+	totaldiv.text("");
     });
     $("#clear,#clearall").click(function(){
-		number = "";
-		totaldiv.text("0");
-		if ($(this).attr("id") === "clearall") {
-			newnumber = "";
-		}
+	number = "";
+	totaldiv.text("0");
+	if ($(this).attr("id") === "clearall") {
+		newnumber = "";
+	}
     });
     $("#equals").click(function(){
-		if (operator === "+"){
-			number = (parseInt(number, 10) + parseInt(newnumber,10)).toString(10);
-		} else if (operator === "-"){
-			number = (parseInt(newnumber, 10) - parseInt(number,10)).toString(10);
-		} else if (operator === "/"){
-			number = (parseInt(newnumber, 10) / parseInt(number,10)).toString(10);
-		} else if (operator === "*"){
-			number = (parseInt(newnumber, 10) * parseInt(number,10)).toString(10);
-		}
-		totaldiv.text(number);
-		testNumLength(number);
-		number = "";
-		newnumber = "";
+	if (operator === "+"){
+		number = (parseInt(number, 10) + parseInt(newnumber,10)).toString(10);
+	} else if (operator === "-"){
+		number = (parseInt(newnumber, 10) - parseInt(number,10)).toString(10);
+	} else if (operator === "/"){
+		number = (parseInt(newnumber, 10) / parseInt(number,10)).toString(10);
+	} else if (operator === "*"){
+		number = (parseInt(newnumber, 10) * parseInt(number,10)).toString(10);
+	}
+	totaldiv.text(number);
+	testNumLength(number);
+	number = "";
+	newnumber = "";
     });
-	$(document).keypress(function(event){
+    $(document).keypress(function(event){
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if (keycode === 49) {
             $("#one").click();
-       } else if (keycode === 50) {
+       	} else if (keycode === 50) {
             $("#two").click();
         } else if (keycode === 51) {
             $("#three").click();

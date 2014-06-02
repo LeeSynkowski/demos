@@ -1,36 +1,97 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Calculator</title>
-		<link rel="stylesheet" href="style.css" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
-		<script src="script.js"></script>
-	</head>
-	<body>
-		<div id="calculator">
-			<div id="total">
-			</div>
-			<div id="operators">
-				<a>+</a>
-				<a>-</a>
-				<a>/</a>
-				<a>*</a>
-				<a>=</a>
-			</div>
-			<div id="numbers">
-				<a>1</a>
-				<a>2</a>
-				<a>3</a>
-				<a>4</a>
-				<a>5</a>
-				<a>6</a>
-				<a>7</a>
-				<a>8</a>
-				<a>9</a>
-				<a id="clear">C</a>
-				<a>0</a>
-				<a id="clearall">AC</a>
-			</div>
-		</div>
-	</body>
+<head>
+	<title>Demo Page</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="script.js" type="text/javascript"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPprrypNoqCJgY6QaT8Fvy0bGvXt3y9zQ&sensor=SET_TO_TRUE_OR_FALSE"></script>
+
+
+    	<script type="text/javascript">
+      	function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(39.2833,-76.6167),
+          zoom: 10
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+      	}
+      	google.maps.event.addDomListener(window, 'load', initialize);
+    	</script>
+
+
+
+</head>
+<body>
+	<div id="description">
+
+	<hr>
+	<h3>HTML, CSS, JavaScript Demo Page</h3>
+	<h3>for Lee Synkowski</h3>
+	<hr>
+	<a href = "mailto:lsynkowski@gmail.com"> email </a><br>
+	<a href = "https://github.com/LeeSynkowski"> github</a><br>
+	<a href = "https://www.facebook.com/lee.synkowski"> facebook </a><br>
+	
+	</div>	
+	<div id="calculator_title">
+	<hr>
+	<br>
+	<h2>Working calculator designed and styled with HTML/CSS. Implemented in JavaScript/Jquery.</h2>
+	<br>
+	<hr>
+	</div>
+
+	<div id="calculator">
+	<div id="total">
+	</div>
+	<div id="operators">
+	<a>+</a>
+	<a>-</a>
+	<a>/</a>
+	<a>*</a>
+	<a id="equals">=</a>
+</div>
+<div id="numbers">
+	<a>1</a>
+	<a>2</a>
+	<a>3</a>
+	<a>4</a>
+	<a>5</a>
+	<a>6</a>
+	<a>7</a>
+	<a>8</a>
+	<a>9</a>
+	<a id="clear">C</a>
+	<a>0</a>
+	<a id="clearall">AC</a>
+</div>
+</div>
+
+	
+	<div id="maps_title">
+	<hr>
+	<br>
+	<h2>Google Maps Embed Via through Google APIs</h2>
+	<br>
+	<hr>
+	</div>
+
+	<div id="map">
+	<iframe width="600" height="450" frameborder="50px" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Baltimore%2C%20MD%2C%20United%20States&key=AIzaSyDPprrypNoqCJgY6QaT8Fvy0bGvXt3y9zQ"></iframe> 
+	</div>
+
+	<div id="twitter_title">
+	<hr>
+	<br>
+	<h2> Embeddable Twitter Widget</h2>
+	<br>
+	<hr>
+	</div>
+    	<a class="twitter-timeline"  href="https://twitter.com/BaltimoreBJJ"  data-widget-id="410453597793423360">Tweets by @BaltimoreBJJ</a>
+    	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+</body>
 </html>

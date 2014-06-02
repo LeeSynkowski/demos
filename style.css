@@ -1,7 +1,55 @@
-body, div, a {
+body {
     padding:0;
     margin:0;
     font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    background: -moz-linear-gradient(45deg, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 17%, rgba(181,198,208,1) 71%, rgba(224,239,249,1) 100%);
+}
+
+div, a {
+    padding:0;
+    margin:0;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    
+}
+
+#title{
+	text-align:center;
+	font-size 40px;
+}
+
+#title a{
+	text-align:right;
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+
+}
+
+h3{
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+	font-size: 30px;
+	font-weight:bold;
+	text-align: center;
+}
+
+
+h2{
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+	font-size: 22px;
+	text-align: center;
+}
+
+#map{ 
+	width: 700px;
+	height:700px;
+	border-left=auto;
+	border-right=auto;
+}
+
+hr { 
+	height: 30px; 
+	border-style: solid; 
+	border-color: black; 
+	border-width: 1px 0 0 0; 
+	border-radius: 20px; 
 }
 
 #calculator {
@@ -63,6 +111,12 @@ body, div, a {
 
 a:hover{
     background: -webkit-gradient(linear, left top, left bottom, from(#DCDCDC), to(#EDEDED));
-    background: -moz-linear-gradient(top,  #DCDCDC,  #EDEDED);
+    background: -moz-linear-gradient(top, #DCDCDC, #EDEDED);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DCDCDC', endColorstr='#EDEDED');
+}
+
+#map-canvas { 
+	  height: 50%;
+	  width:50%;
+
 }
